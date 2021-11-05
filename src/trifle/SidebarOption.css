@@ -2,19 +2,21 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    height: fit-content;
 }
 
 .sidebarOption:hover {
     background-color: #e8f5fe;
     display: flex;
     width: fit-content;
+    height: fit-content;
     border-radius: 30px;
     color: var(--twitter-color);
     transition: color 100ms ease-out;
 }
 
 .sidebarOption > .MuiSvgIcon-root {
-    padding: 20px;
+    padding: 5px;
 }
 
 .sidebarOption > h2 {

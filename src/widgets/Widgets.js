@@ -1,11 +1,16 @@
 import React from "react";
 import './Widgets.css';
+import "../trifle/SidebarOption"
 import {
     TwitterTimelineEmbed,
     TwitterShareButton,
     TwitterTweetEmbed,
 } from "react-twitter-embed";
 import SearchIcon from "@material-ui/icons/Search";
+import SettingsIcon from '@material-ui/icons/Settings';
+import {Button} from "@material-ui/core";
+import SidebarOption from "../trifle/SidebarOption";
+import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 
 
 function Widgets() {
@@ -17,7 +22,10 @@ function Widgets() {
             </div>
 
             <div className="widgets__widgetContainer">
-                <h2>What's happening?</h2>
+                <div className="widgets__header">
+                    <h2>Trends for you</h2>
+                    <SidebarOption Icon={SettingsIcon}/>
+                </div>
                 <TwitterTweetEmbed tweetId={"858551177860055040"} />
                 <TwitterTimelineEmbed
                     sourceType="profile"

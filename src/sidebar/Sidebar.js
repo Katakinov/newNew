@@ -1,6 +1,7 @@
 import React from "react";
 import './Sidebar.css'
 import SidebarOption from "../trifle/SidebarOption";
+import ProfileBar from "../trifle/ProfileBar.js"
 import PetsIcon from '@material-ui/icons/Pets';
 import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 import SearchIcon from "@material-ui/icons/Search";
@@ -29,6 +30,7 @@ function Sidebar() {
 
             {/* Button -> Tweet */}
             <Button variant="outlined" className="sidebar__tweet" fullWidth>Tweet</Button>
+            <ProfileBar name={"Oleg"} tag={"Katakinov"} url={"https://sun9-45.userapi.com/impg/YB_2xXgEdrSNrY_CIRlIRuRQDdtZ6b-cxnkFKg/1VJ5ExNAqVQ.jpg?size=1080x568&quality=95&sign=452a98a77f57bb3b8cb52a5fd71feac7&type=album"}></ProfileBar>
         </div>
     );
 }

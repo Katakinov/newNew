@@ -1,0 +1,44 @@
+.profileBar{
+    display: flex !important;
+    align-items: flex-start !important;
+    font-size: 10px;
+    padding-top: 10px;
+    border-radius: 30px !important;
+    border-width: 0px;
+    background: none;
+}
+
+.profileBar > Avatar {
+    padding-bottom: 5px;
+}
+
+.aliases {
+    margin-left: 10px;
+    display: inline-grid !important;
+    justify-items: flex-start !important;
+}
+
+.profileName {
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+}
+
+.profileTag{
+    font-size: 15px;
+    color: #6E767D;
+}
+
+.threeEntry {
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 55px;
+    color: black;
+}
+
+.profileBar:hover{
+     background-color: #e8f5fe;
+     border-radius: 30px;
+     color: var(--twitter-color);
+     transition: color 100ms ease-out;
+ }
