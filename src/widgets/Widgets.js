@@ -11,7 +11,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import {Button} from "@material-ui/core";
 import SidebarOption from "../trifle/SidebarOption";
 import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
-
+import WidgetsActual from "./WidgetsActual"
 
 function Widgets() {
     return (
@@ -26,20 +26,14 @@ function Widgets() {
                     <h2>Trends for you</h2>
                     <SidebarOption Icon={SettingsIcon}/>
                 </div>
-                <TwitterTweetEmbed tweetId={"858551177860055040"} />
-                <TwitterTimelineEmbed
-                    sourceType="profile"
-                    screenName="cleverqazi"
-                    options={{height: 400}}
-                />
-
-                <TwitterShareButton
-                    url={"https://vk.com/aya40"}
-                    options={{text: "#react js is awesome", via: "dsa"}}
-                />
+                <WidgetsActual nameActual={"Trending in Russia"} textActual={"#нюдсочетверг"} countTweet={"1,7821"}/>
+                <WidgetsActual nameActual={"Entertaiment * Trending"} textActual={"Shang-Chi"} countTweet={"423,531"}/>
+                <WidgetsActual nameActual={"Trending in Russia"} textActual={"Putin God"} countTweet={"666"}/>
+                <WidgetsActual nameActual={"Entertaiment * Trending"} textActual={"For reasons of conscience"} countTweet={"5,231,567"}/>
+                <WidgetsActual nameActual={"Trending in USA"} textActual={"Covid-21"} countTweet={"1,782,112"}/>
             </div>
         </div>
-    )
+    );
 }
 
 export default Widgets;

@@ -1,10 +1,4 @@
-.feed {
-    flex: 0.5;
-    overflow-y: scroll;
-    border-right: 1px solid var(--twitter-background);
-    border-left: 1px solid var(--twitter-background);
-}
-.feed__header {
+.profile__header {
     position: sticky;
     top: 0;
     margin-top: 0;
@@ -17,6 +11,13 @@
     cursor: pointer;
 }
 
-.feed::-webkit-scrollbar {
+.profile{
+    flex: 0.5;
+    overflow-y: scroll;
+    border-right: 1px solid var(--twitter-background);
+    border-left: 1px solid var(--twitter-background);
+}
+
+.profile::-webkit-scrollbar {
     display: none;
 }
