@@ -1,18 +1,17 @@
 import React from "react";
-import Sidebar from "./Sidebar";
-import Feed from './Feed'
-import Widgets from "./Widgets";
+import Sidebar from "./sidebar/Sidebar";
+import Feed from './feed/Feed'
+import Widgets from "./widgets/Widgets";
 import './App.css';
 
 function App() {
-  return (
-      //BEM
-    <div className="app">
-        <Sidebar />
-        <Feed />
-        <Widgets />
-    </div>
-  );
+    return (
+        <div className="app">
+            <Sidebar />
+            <Feed />
+            <Widgets />
+        </div>
+    );
 }
 
 export default App;

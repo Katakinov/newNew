@@ -1,13 +1,16 @@
-body {
-  --twitter-color: #50b7f5;
-  --twitter-background: #e6ecf0;
+.app {
+    display: flex;
+    height: 100vh;
+    max-width: 100%;
+    min-width: fit-content;
 }
 
-.app {
-  display: flex;
-  height: 100vh;
-  max-width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 10px;
+body{
+    --twitter-color: #50b7f5;
+    --twitter-background: #e6ecf0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    padding-left: 10vh;
+    padding-right: 10%;
 }

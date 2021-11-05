@@ -1,6 +1,6 @@
 import React from "react";
 import './Post.css'
-import {Avatar} from "@material-ui/core";
+import {Avatar, Button, MenuItem} from "@material-ui/core";
 import VerifiedUserIcon from "@material-ui/icons/VerifiedUser";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
@@ -28,34 +28,37 @@ function Post({
                         <span className="post__headerSpecial">
                             {verified && <VerifiedUserIcon className="post__badge" />}
                             @koala_aya
+                            <div className="post__headerTime">
+                                time
+                            </div>
                         </span>
                     </h3>
                 </div>
                 <div className="post__headerDescription">
-                    <p>Hello, welcome to my twiclone!</p>
+                    <p>Доброе утро во Владивостоке, редкий кадр с лисами. Сегодня осень порадовала нас тёплым солнышком и безветренной погодой.</p>
+                    <img className="contentImg" src='https://sun9-79.userapi.com/impg/8ddJy_rDtFdWdlkDP2EzWErLa7Bk2Gs91SFaLg/mZMnLXdNnX4.jpg?size=710x1080&quality=95&sign=5867beb66b3a468e0f7f0451c5506de2&type=album'/>
                 </div>
             </div>
-            <img src="https://vk.com/im?peers=219112112_371180109_255407264_280002642_483318882_c13_c23_184354707_c12_432507270&sel=c21&z=photo204563441_457254595%2Fmail647097" alt=""/>
             <div className="post__footer">
-                <span className="comment">
+                <Button variant="text" size="small" className="comment">
                     <ChatBubbleOutlineIcon fontSize="small" />
                     <h5>123</h5>
-                </span>
+                </Button>
 
-                <span className="comment">
+                <Button variant="text" size="small" className="comment">
                     <RepeatIcon fontsize="small" />
                     <h5>124</h5>
-                </span>
+                </Button>
 
-                <span className="comment">
+                <Button variant="text" size="small" className="comment">
                     <FavoriteBorderIcon fontsize="small" />
                     <h5>125</h5>
-                </span>
+                </Button>
 
-                <span className="comment">
+                <Button variant="text" size="small" className="comment">
                     <PublishIcon fontsize="small" />
                     <h5>126</h5>
-                </span>
+                </Button>
             </div>
         </div>
     </div>;
