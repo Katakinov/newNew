@@ -1,4 +1,6 @@
 .profile__header {
+    display: flex;
+    align-items: center;
     position: sticky;
     top: 0;
     margin-top: 0;
@@ -11,6 +13,22 @@
     cursor: pointer;
 }
 
+.profile__headerDandT{
+    display: flex;
+    flex-direction: column;
+    margin-left: 45px;
+}
+
+.dispNameHeader{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.tweetsHeader{
+    font-size: 14px;
+    font-weight: 350;
+}
+
 .profile{
     flex: 0.5;
     overflow-y: scroll;
@@ -20,4 +38,104 @@
 
 .profile::-webkit-scrollbar {
     display: none;
+}
+
+.profileBody{
+    display: flex;
+    flex-direction: column;
+}
+
+.upSide{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    max-height: 300px;
+    position: relative;
+}
+
+.backProfileImage{
+    display: flex;
+    width: 100%;
+}
+
+.downSide{
+    display: flex;
+    flex-direction: column;
+}
+
+.avatarAndEdit{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    max-height: fit-content;
+}
+
+.avatarProfile{
+    display: flex;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 300px;
+    border: 1px solid var(--twitter-background);
+    border-width: 3px;
+    position: relative;
+    margin-top: -80px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+.post__badge {
+    font-size: 14px !important;
+    color: var(--twitter-color) !important;
+}
+
+.editButton{
+    margin-top: 15px;
+    margin-right: 25px;
+    border: 1px solid var(--twitter-background);
+    border-radius: 30px;
+    background-color: white;
+    border-width: 2px;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    width: 120px;
+    height: fit-content;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-weight: 650;
+}
+
+.editButton:hover{
+    background-color: #e8f5fe;
+    color: var(--twitter-color);
+}
+
+.displayName {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.tagName {
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 20px;
+    color: grey;
+}
+
+.profileStatus{
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 450;
+    margin-top: 15px;
+}
+
+.profileCountFollow{
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.following{
+    margin-right: 20px;
 }

@@ -1,6 +1,12 @@
 import React, {useState} from "react";
 import './TweetBox.css'
+import SidebarOption from "../trifle/SidebarOption";
 import { Avatar, Button } from '@material-ui/core'
+import CropOriginalIcon from '@material-ui/icons/CropOriginal';
+import GifIcon from '@material-ui/icons/Gif';
+import PollOutlinedIcon from '@material-ui/icons/PollOutlined';
+import SentimentSatisfiedOutlinedIcon from '@material-ui/icons/SentimentSatisfiedOutlined';
+import EventOutlinedIcon from '@material-ui/icons/EventOutlined';
 
 function TweetBox({avatar}) {
     //const [tweetMessage, setTweetMessage] = useState("");
@@ -20,14 +26,14 @@ function TweetBox({avatar}) {
                         placeholder="What's happening?"
                         type="text"/>
                 </div>
-                <input
-                    value=""
-                    //onChange={e => setTweetMessage(e.target.value)}
-                    className='tweetBox_imageInput'
-                    placeholder="Optional: Enter image URL"
-                    type="text"/>
-
-                <Button /*onClick={sendTweet}*/ type="submit" className="tweetBox_tweetButton">Tweet</Button>
+                <div className="buttonBar">
+                    <SidebarOption Icon={CropOriginalIcon}/>
+                    <SidebarOption Icon={GifIcon}/>
+                    <SidebarOption Icon={PollOutlinedIcon}/>
+                    <SidebarOption Icon={SentimentSatisfiedOutlinedIcon}/>
+                    <SidebarOption Icon={EventOutlinedIcon}/>
+                    <Button /*onClick={sendTweet}*/ type="submit" className="tweetBox_tweetButton">Tweet</Button>
+                </div>
             </form>
         </div>
     )

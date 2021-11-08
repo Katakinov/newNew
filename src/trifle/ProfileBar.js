@@ -6,7 +6,7 @@ function ProfileBar({url, name, tag}){
     return(
 
         <button className="profileBar">
-            <Avatar src={url}/>
+            <Avatar className="avatar" src={url}/>
             <div className="aliases">
                 <span className="profileName">
                     {name}
@@ -15,7 +15,7 @@ function ProfileBar({url, name, tag}){
                     @{tag}
                 </span>
             </div>
-            <div className="threeEntry">...</div>
+            <a href="#" className="threeEntry">...</a>
         </button >
     )
 }

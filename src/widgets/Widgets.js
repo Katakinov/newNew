@@ -26,7 +26,7 @@ function Widgets() {
                     <h2>Trends for you</h2>
                     <SidebarOption Icon={SettingsIcon}/>
                 </div>
-                <WidgetsActual nameActual={"Trending in Russia"} textActual={"#нюдсочетверг"} countTweet={"1,7821"}/>
+                <WidgetsActual nameActual={"Trending in Russia"} textActual={"#Нет пути домой"} countTweet={"17,821"}/>
                 <WidgetsActual nameActual={"Entertaiment * Trending"} textActual={"Shang-Chi"} countTweet={"423,531"}/>
                 <WidgetsActual nameActual={"Trending in Russia"} textActual={"Putin God"} countTweet={"666"}/>
                 <WidgetsActual nameActual={"Entertaiment * Trending"} textActual={"For reasons of conscience"} countTweet={"5,231,567"}/>

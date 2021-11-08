@@ -14,7 +14,7 @@ function WidgetsActual({textActual, nameActual, countTweet}) {
             </div>
             <div className="widgets__actualFooter">
                 <span>{countTweet}</span>
-                <span>Tweets</span>
+                <span> Tweets</span>
             </div>
         </div>
     )

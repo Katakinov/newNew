@@ -1,16 +1,13 @@
 .profileBar{
     display: flex !important;
-    align-items: flex-start !important;
+    align-items: center !important;
     font-size: 10px;
-    padding-top: 10px;
     border-radius: 30px !important;
-    border-width: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: none;
     background: none;
     cursor: pointer;
-}
-
-.profileBar > Avatar {
-    padding-bottom: 5px;
 }
 
 .aliases {
@@ -31,10 +28,14 @@
 }
 
 .threeEntry {
+    display: flex;
     font-size: 25px;
     font-weight: 600;
     margin-left: 55px;
     color: black;
+    text-decoration: none;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .profileBar:hover{

@@ -10,7 +10,7 @@ import PublishIcon from '@material-ui/icons/Publish';
 function Post({
     url,
     displayName,
-    username,
+    username="tuk",
     time,
     verified,
     text,
