@@ -5,7 +5,7 @@ import './Icon.css';
 
 function PetsIconClick({ active, Icon }) {
     return(
-        <div className={"petsIcon ${active && 'sidebarOption--active'}"}>
+        <div className={"petsIconMini ${active && 'sidebarOption--active'}"}>
             <Icon />
         </div>
     );

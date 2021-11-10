@@ -1,0 +1,34 @@
+.pageBody{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: var(--twitter-background);
+}
+
+.welcomeTitle {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    font-weight: 800;
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    color: var(--twitter-color);
+}
+
+.startButton{
+    margin-top: 20px !important;
+    background-color: var(--twitter-color) !important;
+    color: white !important;
+    border: none !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    width: 100%;
+    height: 40px !important;
+}

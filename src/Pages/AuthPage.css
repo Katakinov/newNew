@@ -1,0 +1,73 @@
+body{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.bodyStartPage{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.formsAndImage{
+    display: flex;
+    max-height: 90%;
+    height: 90vh;
+}
+
+.imageBody{
+    width: 50%;
+    height: 100%;
+    /*background-image: url("https://psv4.userapi.com/c520036/u256323700/docs/d7/c4c412497803/IMG_20210416_182633.jpg?extra=Eb7dR65IpM6cOW5SJrz1p2R48E3WT5T4fH1hDDr46h1OTJl2ITi99eS2pezcwaIIntT148cZorbC7UyC2wBpOdSZZpAsd4tsxPbwzgIXmvBbco_E284Ho5V_T4aEDeqMHxcYJsB_5HYZmVJGql_G");*/
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--twitter-background);
+}
+
+.petsIconBig {
+    display: flex;
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+    color: var(--twitter-color);
+    z-index: 1000;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.forms{
+    width: 50%;
+    background-color: var(--twitter-color);
+}
+
+.footerBody {
+    max-height: 10%;
+    height: 10%;
+    position: relative;
+    background-color: var(--twitter-color);
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.footerBody>a{
+    display: flex;
+    font-size: 12px;
+    width: fit-content;
+    height: 1%;
+    color: black;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.footerButton:hover{
+    border-bottom: 2px solid black;
+    transition: color 100ms ease-out;
+}
