@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "../sidebar/Sidebar";
 import Profile from "../feed/Profile"
 import Widgets from "../widgets/Widgets";
-import '../App.css';
+import "./ProfilePage.css"
 
 function ProfilePage() {
     return (

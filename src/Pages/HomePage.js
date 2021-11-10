@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "../sidebar/Sidebar";
 import Home from '../feed/Home'
 import Widgets from "../widgets/Widgets";
-import '../App.css';
+import "./HomePage.css"
 
 function HomePage() {
     return (

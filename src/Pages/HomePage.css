@@ -4,6 +4,7 @@
     max-width: 100%;
     min-width: fit-content;
     padding-left: 10vh;
+    position: fixed;
 }
 
 body{
