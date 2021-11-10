@@ -1,17 +1,13 @@
 import React from "react";
-import Sidebar from "./sidebar/Sidebar";
-import Home from './feed/Home'
-import Widgets from "./widgets/Widgets";
-import Profile from "./feed/Profile"
 import './App.css';
+import HomePage from "./Pages/HomePage";
+import ProfilePage from "./Pages/ProfilePage";
+import StartPage from "./Pages/StartPage";
+
 
 function App() {
     return (
-        <div className="app">
-            <Sidebar />
-            <Home/>
-            <Widgets />
-        </div>
+        <StartPage/>
     );
 }
 

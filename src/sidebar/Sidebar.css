@@ -4,6 +4,8 @@
     margin-top: 15px;
     margin-right: 10px;
     max-width: 270px;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar__tweet {
@@ -17,4 +19,17 @@
     margin-top: 10px !important;
     width: 200px !important;
     margin-bottom: 20px !important;
+}
+
+.sidebar__twitterIcon{
+    margin-bottom: 20px;
+}
+
+.buttonClass{
+    text-decoration: none;
+    color: black;
+}
+
+.buttonList{
+    margin-top: 40px;
 }
