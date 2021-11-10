@@ -17,33 +17,16 @@ import PetsIconClick from "../trifle/Icon";
 function Sidebar() {
     return(
         <div className="sidebar">
-            <a href="/home" className="buttonStyle">
-                <PetsIconClick active Icon={PetsIcon} className="sidebar__twitterIcon"/>
-            </a>
-            <a href="/home" className="buttonStyle">
-                <SidebarOption active Icon={HomeOutlinedIcon} text="Home" />
-            </a>
-            <a href="/explore" className="buttonStyle">
-                <SidebarOption Icon={SearchIcon} text="Explore" />
-            </a>
-            <a href="/notifications" className="buttonStyle">
-                <SidebarOption Icon={NotificationsNoneIcon} text="Notifications" />
-            </a>
-            <a href="/messages" className="buttonStyle">
-                <SidebarOption Icon={MailOutlineIcon} text="Messages" />
-            </a>
-            <a href="/bookmarks" className="buttonStyle">
-                <SidebarOption Icon={BookmarkBorderIcon} text="BookMarks" />
-            </a>
-            <a href="/lists" className="buttonStyle">
-                <SidebarOption Icon={ListAltIcon} text="Lists" />
-            </a>
-            <a href="/profile" className="buttonStyle">
-                <SidebarOption Icon={PermIdentityIcon} text="Profile" />
-            </a>
-            <a href="/more" className="buttonStyle">
-                <SidebarOption Icon={MoreHorizIcon} text="More" />
-            </a>
+            <PetsIconClick active Icon={PetsIcon} className="sidebar__twitterIcon"/>
+
+            <SidebarOption active Icon={HomeOutlinedIcon} text="Home" />
+            <SidebarOption Icon={SearchIcon} text="Explore" />
+            <SidebarOption Icon={NotificationsNoneIcon} text="Notifications" />
+            <SidebarOption Icon={MailOutlineIcon} text="Messages" />
+            <SidebarOption Icon={BookmarkBorderIcon} text="BookMarks" />
+            <SidebarOption Icon={ListAltIcon} text="Lists" />
+            <SidebarOption Icon={PermIdentityIcon} text="Profile" />
+            <SidebarOption Icon={MoreHorizIcon} text="More" />
 
             {/* Button -> Tweet */}
             <Button variant="outlined" className="sidebar__tweet" fullWidth>Tweet</Button>
