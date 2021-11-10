@@ -1,17 +1,20 @@
 import React from "react";
+import { BrowserRouter, Switch, Route} from "react-router-dom";
 import Sidebar from "./sidebar/Sidebar";
 import Home from './feed/Home'
 import Widgets from "./widgets/Widgets";
 import Profile from "./feed/Profile"
-import './App.css';
+import ProfilePage from "./pages/ProfilePage"
+import HomePage from "./pages/HomePage"
+import StartPage from "./pages/StartPage";
 
 function App() {
     return (
-        <div className="app">
-            <Sidebar />
-            <Home/>
-            <Widgets />
-        </div>
+        <Sidebar/>
+        //{/*<BrowserRouter>
+         //       <Route path="/home" component={HomePage}/>
+             //   <Route path="/profile" component={ProfilePage}/>
+            //</BrowserRouter>*/}
     );
 }
 
