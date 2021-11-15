@@ -7,7 +7,7 @@ function StartPage(){
         <div className="pageBody">
             <span className="welcomeTitle">
                 Welcome to TWICLONE my friend!
-                <Button /*onClick={sendTweet}*/ href={"/home"} type="submit" className="startButton">Начать</Button>
+                <Button /*onClick={sendTweet}*/ href={"/home"} type="submit" className="startButton">Start</Button>
             </span>
         </div>
     )
