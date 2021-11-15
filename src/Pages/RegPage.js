@@ -1,8 +1,8 @@
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 import "./RegPage.css"
-import PetsIconImp from "../trifle/pets_black_48dp.svg"
+//import PetsIconImp from "../trifle/pets_black_48dp.svg"
 import React from "react";
-import PetsIconClick from "../trifle/BigIcon";
+//import PetsIconClick from "../trifle/BigIcon";
 import PetsIcon from '@material-ui/icons/Pets';
 import BigIcon from "../trifle/BigIcon";
 import RegForms from "../Forms/RegForms"

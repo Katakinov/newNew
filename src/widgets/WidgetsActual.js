@@ -1,6 +1,6 @@
 import React from "react";
 import "./WidgetsActual.css"
-import {Button} from "@material-ui/core";
+//import {Button} from "@material-ui/core";
 
 function WidgetsActual({textActual, nameActual, countTweet}) {
     return(

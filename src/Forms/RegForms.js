@@ -19,8 +19,8 @@ function RegForms(){
                 <input placeholder={"День"}/>
                 <input placeholder={"Год"}/>
             </div>
-            <a href="#" className="question">Уже есть аккаунт?</a>
-            <Button /*onClick={sendTweet}*/ type="submit" className="confirmButton">Подтвердить</Button>
+            <a href="authorization" className="question">Уже есть аккаунт?</a>
+            <Button /*onClick={sendTweet}*/ href="/profile" type="submit" className="confirmButton">Подтвердить</Button>
         </div>
     )
 }

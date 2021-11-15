@@ -2,8 +2,8 @@ import React from "react";
 import './BigIcon.css';
 
 
-
-function BigIcon({ active, Icon }) {
+//active был с Icon
+function BigIcon({ Icon }) {
     return(
         <div className={"petsIconBig"}>
             <Icon />

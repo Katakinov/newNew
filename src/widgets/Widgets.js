@@ -1,16 +1,16 @@
 import React from "react";
 import './Widgets.css';
 import "../trifle/SidebarOption"
-import {
+/*import {
     TwitterTimelineEmbed,
     TwitterShareButton,
     TwitterTweetEmbed,
-} from "react-twitter-embed";
+} from "react-twitter-embed";*/
 import SearchIcon from "@material-ui/icons/Search";
 import SettingsIcon from '@material-ui/icons/Settings';
-import {Button} from "@material-ui/core";
+//import {Button} from "@material-ui/core";
 import SidebarOption from "../trifle/SidebarOption";
-import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
+//import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 import WidgetsActual from "./WidgetsActual"
 
 function Widgets() {

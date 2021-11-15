@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import Sidebar from "../sidebar/Sidebar";
 import Home from '../feed/Home'
 import Widgets from "../widgets/Widgets";

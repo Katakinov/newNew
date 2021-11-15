@@ -1,5 +1,5 @@
 import React from "react";
-import {Avatar, Button} from "@material-ui/core";
+import {Avatar, /*Button*/} from "@material-ui/core";
 import "./ProfileBar.css"
 
 function ProfileBar({url, name, tag}){

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import './TweetBox.css'
 import SidebarOption from "../trifle/SidebarOption";
 import { Avatar, Button } from '@material-ui/core'
