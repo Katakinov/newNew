@@ -36,8 +36,8 @@ function App() {
             <AppRoute path='/' Component="Home" element={<TwoPage/>}/>
             <AppRoute path='/home' Component="Home" element={<TwoPage/>}/>
             <AppRoute path="/profile" Component="<Profile/>" element={<TwoPage/>}/>
-            <AppRoute path="/registration" element={<RegPage/>}/>
-            <AppRoute path="/authorization" element={<AuthPage/>}/>
+            <AppRoute path="/register" element={<RegPage/>}/>
+            <AppRoute path="/login" element={<AuthPage/>}/>
             <AppRoute path="/start" element={<StartPage/>}/>
         </Router>
     );
