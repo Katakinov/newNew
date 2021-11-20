@@ -4,38 +4,28 @@ import Widgets from "../widgets/Widgets";
 import "./TwoPage.css";
 import Home from "../feed/Home"
 import Profile from "../feed/Profile"
-import App from "../App"
-
-
-/*class TwoPage extends Component{
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return(
-            <div className="app">
-                <React.Fragment>
-                    <Sidebar/>
-                        {this.props.children}
-                    <Widgets/>
-                </React.Fragment>
-            </div>
-        )
-    }
-}
-
-export default TwoPage;*/
+import profileItems from "../array/ProfileItems";
+import {App, AppRoute} from "../App";
 
 class TwoPage extends Component{
-    render() {
+    constructor(props) {
+        super(props);
+        this.state = {
+            element: App.layout,
+        }
+    }
+    render(){
         return(
-            <div className="app">
-                <Sidebar/>
-                <Home/>
-                <Widgets/>
-            </div>
+            <React.Fragment>
+                <div className="app">
+                    <Sidebar/>
+                    <AppRoute/>
+                    <Widgets/>
+                </div>
+            </React.Fragment>
         );
     }
 }
+
 
 export default TwoPage;

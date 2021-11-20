@@ -6,10 +6,9 @@ import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import profileItems from "../array/ProfileItems"
 import profilePostItems from "../array/ProfilePostItems"
 
-//function Profile({
 class Profile extends Component{
     constructor(props) {
-        super(props);
+        super();
         this.state = {
             profileAvatar: profileItems.profileAvatar || "https://img.favpng.com/16/2/3/koala-bear-clip-art-png-favpng-e9SK7y5GVZm012JrLSbkRVZ71.jpg",
             profileUserName: profileItems.profileUserName || "defaultUserName",

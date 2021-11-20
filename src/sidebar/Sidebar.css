@@ -8,6 +8,11 @@
     flex-direction: column;
 }
 
+.activeButton{
+    border-bottom: 50px solid var(--twitter-color);
+    background-color: red;
+}
+
 .sidebar__tweet {
     background-color: var(--twitter-color) !important;
     border: none !important;
@@ -28,6 +33,12 @@
 .buttonClass{
     text-decoration: none;
     color: black;
+}
+
+.buttonClass:active{
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid var(--twitter-color);
 }
 
 .buttonList{

@@ -16,26 +16,12 @@ const AppRoute = ({component:Component, layout:Layout, ...rest})=>(
     )}></Route></Routes>
 )
 
-//function App() {
-//    return (
-        /*<Router>
-            <Routes>
-                <Route path="/profile" component={ProfilePage}></Route>
-            </Routes>
-        </Router>*/
-        /*<Router>
-            <AppRoute path='/user' exact layout={TwoPage} component={Profile}/>
-            <AppRoute path="/home" layout={TwoPage} component={Home}/>
-        </Router>*/
-        /*<Router>
-            <AppRoute path="/" component={HomePage}/>
-        </Router>*/
 function App() {
     return (
         <Router>
-            <AppRoute path='/' Component="Home" element={<TwoPage/>}/>
-            <AppRoute path='/home' Component="Home" element={<TwoPage/>}/>
-            <AppRoute path="/profile" Component="<Profile/>" element={<TwoPage/>}/>
+            <AppRoute path='/' element={<HomePage/>}/>
+            <AppRoute path='/home' element={<HomePage/>}/>
+            <AppRoute path="/profile" element={<ProfilePage/>}/>
             <AppRoute path="/register" element={<RegPage/>}/>
             <AppRoute path="/login" element={<AuthPage/>}/>
             <AppRoute path="/start" element={<StartPage/>}/>
@@ -43,4 +29,4 @@ function App() {
     );
 }
 
-export default App;
+export {App, AppRoute};

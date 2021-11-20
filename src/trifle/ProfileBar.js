@@ -4,7 +4,7 @@ import "./ProfileBar.css"
 
 function ProfileBar({url, name, tag}){
     return(
-
+        <a href="/profile" className="linkProf">
         <button className="profileBar">
             <Avatar className="avatar" src={url}/>
             <div className="aliases">
@@ -17,6 +17,7 @@ function ProfileBar({url, name, tag}){
             </div>
             <a href="#" className="threeEntry">...</a>
         </button >
+        </a>
     )
 }
 
