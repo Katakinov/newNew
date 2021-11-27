@@ -13,6 +13,7 @@ import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import { Button } from "@material-ui/core";
 import PetsIconClick from "../trifle/Icon";
+import {NavLink} from "react-router-dom";
 
 function Sidebar() {
     return(
@@ -21,30 +22,30 @@ function Sidebar() {
                 <PetsIconClick active Icon={PetsIcon} className="sidebar__twitterIcon"/>
             </a>
             <div className="buttonList">
-                <a href="/home" className="buttonClass">
+                <NavLink to="/home" className="buttonClass">
                     <SidebarOption active Icon={HomeOutlinedIcon} text="Home" />
-                </a>
-                <a href="/explore" className="buttonClass">
+                </NavLink>
+                <NavLink to="/explore" className="buttonClass">
                     <SidebarOption Icon={SearchIcon} text="Explore" />
-                </a>
-                <a href="/notifications" className="buttonClass">
+                </NavLink>
+                <NavLink to="/notifications" className="buttonClass">
                     <SidebarOption Icon={NotificationsNoneIcon} text="Notifications" />
-                </a>
-                <a href="/messages" className="buttonClass">
+                </NavLink>
+                <NavLink to="/messages" className="buttonClass">
                     <SidebarOption Icon={MailOutlineIcon} text="Messages" />
-                </a>
-                <a href="/bookmarks" className="buttonClass">
+                </NavLink>
+                <NavLink to="/bookmarks" className="buttonClass">
                     <SidebarOption Icon={BookmarkBorderIcon} text="BookMarks" />
-                </a>
-                <a href="/lists" className="buttonClass">
+                </NavLink>
+                <NavLink to="/lists" className="buttonClass">
                     <SidebarOption Icon={ListAltIcon} text="Lists" />
-                </a>
-                <a href="/profile" className="buttonClass">
+                </NavLink>
+                <NavLink to="/profile" className="buttonClass">
                     <SidebarOption Icon={PermIdentityIcon} text="Profile" />
-                </a>
-                <a href="/more" className="buttonClass">
+                </NavLink>
+                <NavLink to="/more" className="buttonClass">
                     <SidebarOption Icon={MoreHorizIcon} text="More" />
-                </a>
+                </NavLink>
             </div>
 
             {/* Button -> Tweet */}

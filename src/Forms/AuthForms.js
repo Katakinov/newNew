@@ -12,7 +12,7 @@ function AuthForms(){
                 <input placeholder={"Пароль"} className="passLine"/>
             </div>
             <a href="#" className="question">Забыли пароль?</a>
-            <Button /*onClick={sendTweet}*/ type="submit" className="confirmButton">Подтвердить</Button>
+            <Button /*onClick={sendTweet}*/ href="/profile" type="submit" className="confirmButton">Подтвердить</Button>
         </div>
     )
 }

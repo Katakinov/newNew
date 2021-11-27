@@ -8,15 +8,17 @@ import RepeatIcon from '@material-ui/icons/Repeat';
 import PublishIcon from '@material-ui/icons/Publish';
 
 function Post({
-    url,
-    displayName,
-    username="tuk",
-    time,
-    verified,
-    text,
-    image,
-    avatar
-
+    userName="userName",
+    tagName="tagName",
+    verified = false,
+    postTime="00:00",
+    postText = "postText",
+    postImage,
+    avatar = "https://img.icons8.com/cotton/452/dog-sit--v2.png",
+    likeNumber=0,
+    commentNumber=0,
+    shareNumber=0,
+    retweetNumber=0
 }) {
     return <div className='post'>
         <div className='post__avatar'>
@@ -26,40 +28,40 @@ function Post({
             <div className="post__header">
                 <div className="post__headerText">
                     <h3>
-                        {displayName}{" "}
+                        {userName}{" "}
                         <span className="post__headerSpecial">
                             {verified && <VerifiedUserIcon className="post__badge" />}
-                            @{username}
+                            @{tagName}
                             <div className="post__headerTime">
-                                {time}
+                                {postTime}
                             </div>
                         </span>
                     </h3>
                 </div>
                 <div className="post__headerDescription">
-                    <p>{text}</p>
-                    <img className="contentImg" src={image}/>
+                    <p>{postText}</p>
+                    <img className="contentImg" src={postImage}/>
                 </div>
             </div>
             <div className="post__footer">
                 <Button variant="text" size="small" className="comment">
                     <ChatBubbleOutlineIcon fontSize="small" />
-                    <h5>123</h5>
+                    <h5>{commentNumber}</h5>
                 </Button>
 
                 <Button variant="text" size="small" className="comment">
                     <RepeatIcon fontsize="small" />
-                    <h5>124</h5>
+                    <h5>{retweetNumber}</h5>
                 </Button>
 
                 <Button variant="text" size="small" className="comment">
                     <FavoriteBorderIcon fontsize="small" />
-                    <h5>125</h5>
+                    <h5>{likeNumber}</h5>
                 </Button>
 
                 <Button variant="text" size="small" className="comment">
                     <PublishIcon fontsize="small" />
-                    <h5>126</h5>
+                    <h5>{shareNumber}</h5>
                 </Button>
             </div>
         </div>

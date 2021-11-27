@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import './TweetBox.css'
 import SidebarOption from "../trifle/SidebarOption";
 import { Avatar, Button } from '@material-ui/core'
@@ -8,7 +8,7 @@ import PollOutlinedIcon from '@material-ui/icons/PollOutlined';
 import SentimentSatisfiedOutlinedIcon from '@material-ui/icons/SentimentSatisfiedOutlined';
 import EventOutlinedIcon from '@material-ui/icons/EventOutlined';
 
-function TweetBox({avatar}) {
+function TweetBox({profileAvatar}) {
     //const [tweetMessage, setTweetMessage] = useState("");
     //const [tweetImage, setTweetImage] = useState("");
     //const sendTweet = e => {
@@ -19,7 +19,7 @@ function TweetBox({avatar}) {
         <div className='tweetBox'>
             <form>
                 <div className='tweetBox_input'>
-                    <Avatar src={avatar}/>
+                    <Avatar src={profileAvatar}/>
                     <input
                         //onChange={e => setTweetMessage(e.target.value)}
                         value=""

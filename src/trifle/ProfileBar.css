@@ -10,6 +10,10 @@
     cursor: pointer;
 }
 
+.linkProf{
+    text-decoration: none;
+}
+
 .aliases {
     margin-left: 10px;
     display: inline-grid !important;

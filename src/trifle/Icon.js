@@ -2,8 +2,8 @@ import React from "react";
 import './Icon.css';
 
 
-
-function PetsIconClick({ active, Icon }) {
+//active был с Icon
+function PetsIconClick({ Icon }) {
     return(
         <div className={"petsIconMini ${active && 'sidebarOption--active'}"}>
             <Icon />

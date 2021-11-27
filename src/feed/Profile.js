@@ -1,56 +1,82 @@
-import React from "react";
+import React, {Component} from "react";
 import "./Profile.css"
 import Post from "./Post"
-import { Avatar, Button } from '@material-ui/core'
 import VerifiedUserIcon from "@material-ui/icons/VerifiedUser";
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
+import profileItems from "../array/ProfileItems"
+import profilePostItems from "../array/ProfilePostItems"
 
-function Profile({displayName="displayName", tweets="0",avatar, backProfileImage, status="status", verified="true", tagName="tagName", following=0, followers=0}){
-    return(
-        <div className="profile">
-            <div className="profile__header">
-                <KeyboardBackspaceIcon fontSize="small"/>
-                <div className="profile__headerDandT">
-                    <span className="dispNameHeader">
-                        {displayName}
-                    </span>
-                    <span className="tweetsHeader">
-                        {tweets} Tweets
-                    </span>
+class Profile extends Component{
+    constructor(props) {
+        super();
+        this.state = {
+            profileAvatar: profileItems.profileAvatar || "https://img.favpng.com/16/2/3/koala-bear-clip-art-png-favpng-e9SK7y5GVZm012JrLSbkRVZ71.jpg",
+            profileUserName: profileItems.profileUserName || "defaultUserName",
+            tweetsNumber: profileItems.tweetsNumber || 0,
+            backProfileImage: profileItems.backProfileImage || 'https://steamuserimages-a.akamaihd.net/ugc/1013814773810546845/83B0439703299AE4ECA5CA1A4A65490D50234ADD/',
+            profileTagName: profileItems.profileTagName || "defaultTagName",
+            profileVerified: profileItems.profileVerified || false,
+            status: profileItems.status || "defaultStatus",
+            following: profileItems.following || 0,
+            followers: profileItems.followers || 0,
+        };
+    }
+    render() {
+        return (
+            <div className="profile">
+                <div className="profile__header">
+                    <KeyboardBackspaceIcon fontSize="small"/>
+                    <div className="profile__headerDandT">
+                        <span className="dispNameHeader">{this.state.profileUserName}</span>
+                        <span className="tweetsHeader">{this.state.tweetsNumber} Tweets</span>
+                    </div>
                 </div>
+                <div className="profileBody">
+                    <div className="upSide">
+                        <img className="backProfileImage" src={this.state.backProfileImage}/>
+                    </div>
+                    <div className="downSide">
+                        <div className="avatarAndEdit">
+                            <a className="avatar">
+                                <img src={this.state.profileAvatar} className="avatarProfile"></img>
+                            </a>
+                            <a className="editButton" href="#">Edit profile</a>
+                        </div>
+                        <div className="displayName">{this.state.profileUserName}</div>
+                        <div className="tagName">
+                            {this.state.profileTagName}
+                            {this.state.profileVerified && <VerifiedUserIcon className="post__badge"/>}
+                        </div>
+                        <div className="profileStatus">
+                            {this.state.status}
+                        </div>
+                        <div className="profileCountFollow">
+                            <span className="following">{this.state.following} Following</span>
+                            <span>{this.state.followers} Followers</span>
+                        </div>
+                    </div>
+                </div>
+                {profilePostItems.map((item, index) => {
+                    return(
+                        <Post
+                            userName={item.userName}
+                            tagName={item.tagName}
+                            verified={item.verified && false}
+                            postTime={item.postTime}
+                            postText={item.postText}
+                            postImage={item.postImage}
+                            avatar={item.avatar}
+                            commentNumber={item.commentNumber}
+                            retweetNumber={item.retweetNumber}
+                            likeNumber={item.likeNumber}
+                            shareNumber={item.shareNumber}
+                            key={index}
+                        />
+                    )
+                })}
             </div>
-            <div className="profileBody">
-                <div className="upSide">
-                    <img className="backProfileImage" src={"https://psv4.userapi.com/c532036/u256323700/docs/d40/a6474ad76ff3/DSC_0192.jpg?extra=lpzjrcyOE6B360zBgUnvYgMf3YN6rbFfqg0Bl8WC0D5tl03TiAtc3YeVRXYkDf2Hzxvvz-T2KJHlJHQrlZcmuiHsGuiXyDYZ18rrVgwl1SQqt_31caWTVMrmvGiazj-T9W3g9PGXAe81TD4nHZMOTmQ"} />
-                </div>
-
-                <div className="downSide">
-                    <div className="avatarAndEdit">
-                        <a className="avatar">
-                            <img  src={"https://psv4.userapi.com/c536436/u256323700/docs/d17/02dd0931f940/DSC_0056.jpg?extra=c5V1sS_cYSfDLMpDj7dMvORpxsVvcLorS-lZ7XJkSgnSB_F9j9JOgNgACSOfMAjc8DPY9L88CchDzK-s8a-ZZWC6ZRZGBNnCKYt2LaVAPiZFU1x9NEYVQRK1FNsIfOPBhC2Ewe-_mMxKoNobFc8DA8BA"} className="avatarProfile"></img>
-                        </a>
-                        <a className="editButton" href="#">Edit profile</a>
-                    </div>
-                    <div className="displayName">{displayName}</div>
-                    <div className="tagName">
-                        {tagName}
-                        {verified && <VerifiedUserIcon className="post__badge" />}
-                    </div>
-                    <div className="profileStatus">
-                        {status}
-                    </div>
-                    <div className="profileCountFollow">
-                        <span className="following">{following} Following</span>
-                        <span>{followers} Followers</span>
-                    </div>
-                </div>
-            </div>
-            <Post/>
-            <Post/>
-            <Post/>
-            <Post/>
-        </div>
-    )
+        );
+    }
 }
 
 export default Profile;
