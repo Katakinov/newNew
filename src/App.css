@@ -3,7 +3,8 @@
     height: 100vh;
     max-width: 100%;
     min-width: fit-content;
-    padding-left: 10vh;
+    padding-left: 5vh;
+    position: fixed;
 }
 
 body{

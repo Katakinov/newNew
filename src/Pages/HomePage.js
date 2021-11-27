@@ -3,13 +3,14 @@ import Sidebar from "../sidebar/Sidebar";
 import Home from '../feed/Home'
 import Widgets from "../widgets/Widgets";
 import "./HomePage.css"
+import Layout from "../layot/Layout"
 
 function HomePage() {
     return (
         <div className="app">
-            <Sidebar/>
-            <Home/>
-            <Widgets />
+            <Layout>
+                <Home/>
+            </Layout>
         </div>
     );
 }
