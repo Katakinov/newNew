@@ -12,6 +12,8 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import SidebarOption from "../trifle/SidebarOption";
 //import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 import WidgetsActual from "./WidgetsActual"
+import ItemsWid from "../array/WidjetsItems";
+import {Settings} from "@material-ui/icons";
 
 function Widgets() {
     return (
@@ -24,13 +26,19 @@ function Widgets() {
             <div className="widgets__widgetContainer">
                 <div className="widgets__header">
                     <h2>Trends for you</h2>
-                    <SidebarOption Icon={SettingsIcon}/>
+                    <a className="settings__icon">
+                        <Settings/>
+                    </a>
                 </div>
-                <WidgetsActual nameActual={"Trending in Russia"} textActual={"#Нет пути домой"} countTweet={"17,821"}/>
-                <WidgetsActual nameActual={"Entertaiment * Trending"} textActual={"Shang-Chi"} countTweet={"423,531"}/>
-                <WidgetsActual nameActual={"Trending in Russia"} textActual={"Putin God"} countTweet={"666"}/>
-                <WidgetsActual nameActual={"Entertaiment * Trending"} textActual={"For reasons of conscience"} countTweet={"5,231,567"}/>
-                <WidgetsActual nameActual={"Trending in USA"} textActual={"Covid-21"} countTweet={"1,782,112"}/>
+                {ItemsWid.map((item, index) => {
+                    return(
+                        <WidgetsActual nameActual={item.nameActual}
+                                       textActual={item.textActual}
+                                       countTweet={item.countTweet}
+                                       key={index}
+                        />
+                    )
+                })}
             </div>
         </div>
     );

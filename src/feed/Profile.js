@@ -61,7 +61,7 @@ class Profile extends Component{
                         <Post
                             userName={item.userName}
                             tagName={item.tagName}
-                            verified={item.verified && false}
+                            verified={item.verified && true}
                             postTime={item.postTime}
                             postText={item.postText}
                             postImage={item.postImage}

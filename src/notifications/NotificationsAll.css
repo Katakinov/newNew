@@ -1,4 +1,12 @@
-.notifications__header {
+.notificationsAll {
+    flex: 0.5;
+    overflow-y: scroll;
+    border-right: 1px solid var(--twitter-background);
+    border-left: 1px solid var(--twitter-background);
+    width: fit-content;
+}
+
+.notificationsAll__header {
     position: sticky;
     font-weight: 500;
     font-size: 25px;
@@ -9,25 +17,18 @@
     height: fit-content;
 }
 
-.notifications {
-    flex: 0.5;
-    overflow-y: scroll;
-    border-right: 1px solid var(--twitter-background);
-    border-left: 1px solid var(--twitter-background);
-    width: fit-content;
-}
-
-.notifications::-webkit-scrollbar {
+.notificationsAll::-webkit-scrollbar {
     display: none;
 }
 
-.notifications__body{
+.notificationsAll__body{
     display: flex;
     height: fit-content;
     width: 100vh;
     justify-content: space-around;
 }
-.notifications__button{
+
+.notificationsAll1__button{
     display: flex;
     font-size: 24px;
     justify-content: center;
@@ -36,17 +37,18 @@
     text-decoration: none;
     color: grey;
     height: fit-content;
+    border-bottom: 4px solid var(--twitter-color);
 }
 
-.notifications__button:active{
+.notificationsAll2__button{
     display: flex;
     font-size: 24px;
     justify-content: center;
     border: none;
     cursor: pointer;
     text-decoration: none;
-    color: black;
-    border-bottom: 4px solid var(--twitter-color);
+    color: grey;
+    height: fit-content;
 }
 
 .all__body{

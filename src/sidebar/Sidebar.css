@@ -35,10 +35,8 @@
     color: black;
 }
 
-.buttonClass:active{
-    text-decoration: none;
-    color: black;
-    border-bottom: 2px solid var(--twitter-color);
+.buttonClass:focus{
+    color: var(--twitter-color);
 }
 
 .buttonList{

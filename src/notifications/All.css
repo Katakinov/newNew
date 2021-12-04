@@ -1,0 +1,13 @@
+.avatarProfile{
+    margin-top: 20px;
+}
+
+.all__text{
+    font-size: 20px;
+}
+
+.all__body{
+    border-top: 2px solid var(--twitter-background);
+    padding-top: 20px;
+    padding-left: 40px;
+}

@@ -2,7 +2,7 @@ const profilePostItems = [
     {
         userName: 'Katakinov',
         avatar: 'https://sun9-79.userapi.com/impg/8ddJy_rDtFdWdlkDP2EzWErLa7Bk2Gs91SFaLg/mZMnLXdNnX4.jpg?size=710x1080&quality=95&sign=5867beb66b3a468e0f7f0451c5506de2&type=album',
-        verified: '',
+        verified: true,
         tagName: 'koala_aya',
         postTime: '23:42',
         postText: 'Корги',
@@ -19,7 +19,7 @@ const profilePostItems = [
         tagName: 'koala_aya',
         postTime: '01:51',
         postText: 'night city',
-        postImage: 'https://psv4.userapi.com/c536132/u256323700/docs/d42/bfe8bb21e615/IMG_20211106_220518.jpg?extra=mhZlDoK03WLcoPvG4vlOvDcHUfDAcU8hIIBwRonvcoHpWzODn1cDqzg4hDBa6mrBz6-g93a6ViibEixwN-YDMGrn9viE9utViEOQC4Cu3-XjFfr0-TvOfuo8F0qH9XYEY9PInQ0LX95tbwQ8cSaLnsz5',
+        postImage: 'https://sun9-79.userapi.com/impg/8ddJy_rDtFdWdlkDP2EzWErLa7Bk2Gs91SFaLg/mZMnLXdNnX4.jpg?size=710x1080&quality=95&sign=5867beb66b3a468e0f7f0451c5506de2&type=album',
         likeNumber: '121',
         commentNumber:'422',
         shareNumber: '333',
@@ -28,7 +28,7 @@ const profilePostItems = [
     {
         userName: 'Katakinov',
         avatar: 'https://sun9-79.userapi.com/impg/8ddJy_rDtFdWdlkDP2EzWErLa7Bk2Gs91SFaLg/mZMnLXdNnX4.jpg?size=710x1080&quality=95&sign=5867beb66b3a468e0f7f0451c5506de2&type=album',
-        verified: '',
+        verified: false,
         tagName: 'koala_aya',
         postTime: '12:15',
         postText: 'AYA',
@@ -41,7 +41,7 @@ const profilePostItems = [
     {
         userName: 'Katakinov',
         avatar: 'https://sun9-79.userapi.com/impg/8ddJy_rDtFdWdlkDP2EzWErLa7Bk2Gs91SFaLg/mZMnLXdNnX4.jpg?size=710x1080&quality=95&sign=5867beb66b3a468e0f7f0451c5506de2&type=album',
-        verified: '',
+        verified: true,
         tagName: 'koala_aya',
         postTime: '11:11',
         postText: 'тоже милая собачка',

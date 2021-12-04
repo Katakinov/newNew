@@ -1,7 +1,4 @@
 import React from "react";
-import TweetBox from "../feed/TweetBox";
-import homePostItems from "../array/HomePostItems";
-import Post from "../feed/Post";
 import "./Notifications.css"
 
 function Notifications() {
@@ -10,7 +7,14 @@ function Notifications() {
             <div className="notifications__header">
                 <div>Notifications</div>
             </div>
-            <Post/>
+            <div className="notifications__body">
+                <a className="notifications__button" href="/notificationsall">
+                    All
+                </a>
+                <a className="notifications__button" href="/notificationsmentions">
+                    Mentions
+                </a>
+            </div>
         </div>
     )
 };

@@ -5,12 +5,13 @@ const homePostItems = [
         verified: false,
         tagName: 'koala_aya',
         postTime: '10:10',
-        postText: 'just',
+        postText: 'JUST OLEG',
         postImage: 'https://sun9-79.userapi.com/impg/8ddJy_rDtFdWdlkDP2EzWErLa7Bk2Gs91SFaLg/mZMnLXdNnX4.jpg?size=710x1080&quality=95&sign=5867beb66b3a468e0f7f0451c5506de2&type=album',
         likeNumber: '10',
         commentNumber:'20',
         shareNumber: '30',
-        retweetNumber: '40'
+        retweetNumber: '40',
+        activeLike: false,
     },
     {
         userName: 'Dannie',

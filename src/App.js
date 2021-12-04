@@ -7,7 +7,9 @@ import StartPage from "./Pages/StartPage";
 import RegPage from "./Pages/RegPage";
 import AuthPage from "./Pages/AuthPage";
 import UserPage from "./Pages/UserPage";
-import NotificationsPage from "./Pages/NotificationsPage";
+import NotificationsPageAll from "./Pages/NotificationsPageAll";
+import NotificationsPageMentions from "./Pages/NotificationsPageMentions";
+import ExplorePage from "./Pages/ExplorePage";
 
 function App() {
     return (
@@ -20,9 +22,11 @@ function App() {
                 <Route path="/register" exact element={<RegPage/>}/>
                 <Route path="/login" exact element={<AuthPage/>}/>
                 <Route path="/start" exact element={<StartPage/>}/>
-                <Route path="/explore" exact element={<StartPage/>}/>
+                <Route path="/explore" exact element={<ExplorePage/>}/>
                 <Route path="/bookmarks" exact element={<RegPage/>}/>
-                <Route path="/notifications" exact element={<NotificationsPage/>}/>
+                <Route path="/notifications" exact element={<NotificationsPageAll/>}/>
+                <Route path="/notificationsall" exact element={<NotificationsPageAll/>}/>
+                <Route path="/notificationsmentions" exact element={<NotificationsPageMentions/>}/>
             </Routes>
         </Router>
         //<Route path="/user/:login"></Route>
