@@ -35,7 +35,7 @@ function Explore() {
             <div className="explorePost">
                 {homePostItems.map((item, index) => {
                     return(
-                        <a className="postButton" href="/home">
+                        <a className="postButton">
                             <Post
                                 userName={item.userName}
                                 tagName={item.tagName}

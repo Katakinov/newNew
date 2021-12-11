@@ -1,5 +1,6 @@
 import React from "react";
 import "./NotificationsMentions.css"
+import {NavLink} from "react-router-dom";
 
 function NotificationsMentions() {
     return(
@@ -8,12 +9,12 @@ function NotificationsMentions() {
                 <div>Notifications</div>
             </div>
             <div className="notificationsMentions__body">
-                <a className="notificationsMentions1__button" href="/notificationsall">
+                <NavLink className="notificationsMentions1__button" to="/notifications/all">
                     All
-                </a>
-                <a className="notificationsMentions2__button" href="/notificationsmentions">
+                </NavLink>
+                <NavLink className="notificationsMentions2__button" to="/notifications/mentions">
                     Mentions
-                </a>
+                </NavLink>
             </div>
             <div className="body_all1">
                 <div className="for__span">

@@ -46,3 +46,17 @@
 .followButton:hover {
     background-color: var(--twitter-color);
 }
+
+.avatarProfileWid{
+    display: flex;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 300px;
+    border: 1px solid var(--twitter-background);
+    border-width: 3px;
+    position: relative;
+    margin-top: 20px !important;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    background-color: var(--twitter-background);
+}

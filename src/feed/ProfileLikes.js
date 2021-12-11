@@ -60,13 +60,13 @@ class Profile extends Component{
                     </div>
                 </div>
                 <div className="profile__butBar">
-                    <NavLink active className="profile__ButtonActive" to="/profile">Tweets</NavLink>
+                    <NavLink active className="profile__Button" to="/profile">Tweets</NavLink>
                     <NavLink className="profile__Button" to="/profile/tweets&replies">Tweet & replies</NavLink>
                     <NavLink className="profile__Button" to="/profile/media">Media</NavLink>
-                    <NavLink className="profile__Button" to="/profile/likes">Likes</NavLink>
+                    <NavLink className="profile__ButtonActive" to="/profile/likes">Likes</NavLink>
                 </div>
                 {profilePostItems.map((item, index) => {
-                    if (item.userName == "Katakinov"){
+                    if (item.liked){
                         return(
                             <Post
                                 userName={item.userName}
@@ -85,20 +85,24 @@ class Profile extends Component{
                             />
                         )
                     }
-                })}
-                <div className="exploreWid">
-                    <h2>Who to follow</h2>
-                    {ItemsWid.map((item, index) => {
-                        return(
-                            <WidgetsActual nameActual={item.nameActual}
-                                           textActual={item.textActual}
-                                           countTweet={item.countTweet}
-                                           key={index}
-                            />
+                    else if (index <= 2){
+                        return (
+                            <div className="exploreWid">
+                                <h2>Who to follow</h2>
+                                {ItemsWid.map((item, index) => {
+                                    return (
+                                        <WidgetsActual nameActual={item.nameActual}
+                                                       textActual={item.textActual}
+                                                       countTweet={item.countTweet}
+                                                       key={index}
+                                        />
+                                    )
+                                })}
+                                <a className="moreInfo" href="#">Show more</a>
+                            </div>
                         )
-                    })}
-                    <a className="moreInfo" href="#">Show more</a>
-                </div>
+                    }
+                })}
             </div>
         );
     }

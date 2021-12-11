@@ -1,13 +1,13 @@
 import React from "react";
-import Profile from "../feed/Profile"
 import Layout from "../layot/Layout";
 import "./ProfilePage.css";
+import ProfileMedia from "../feed/ProfileMedia";
 
 function ProfilePage() {
     return (
         <div className="app">
             <Layout>
-                <Profile/>
+                <ProfileMedia/>
             </Layout>
         </div>
     );

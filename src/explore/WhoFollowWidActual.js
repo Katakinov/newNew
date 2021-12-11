@@ -8,7 +8,7 @@ function WhoFollowWidActual({userName, tagName, avatar, verified}) {
         <div className="whoFollowActual">
             <div className="whoFollowActual__header">
                 <div className="whoFollowProfileBar">
-                    <Avatar src={avatar} className="avatarProfile"></Avatar>
+                    <Avatar src={avatar} className="avatarProfileWid"></Avatar>
                     <div className="whoFollowActual__tagAndNameAndVer">
                         <div className="whoFollowActual__verAndName">
                             <span className="whoFollowActual__name">{userName}</span>

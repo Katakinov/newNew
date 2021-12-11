@@ -1,6 +1,7 @@
 import React from "react";
 import "./NotificationsAll.css"
 import All from "./All"
+import {NavLink} from "react-router-dom";
 
 function NotificationsAll() {
     return(
@@ -9,12 +10,12 @@ function NotificationsAll() {
                 <div>Notifications</div>
             </div>
             <div className="notificationsAll__body">
-                <a className="notificationsAll1__button" href="/notificationsall">
+                <NavLink className="notificationsAll1__button" to="/notifications/all">
                     All
-                </a>
-                <a className="notificationsAll2__button" href="/notificationsmentions">
+                </NavLink>
+                <NavLink className="notificationsAll2__button" to="/notifications/mentions">
                     Mentions
-                </a>
+                </NavLink>
             </div>
             <All/>
         </div>

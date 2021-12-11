@@ -21,13 +21,13 @@
     display: none;
 }
 
-.notifications__body{
+.notifications__body {
     display: flex;
     height: fit-content;
     width: 100vh;
     justify-content: space-around;
 }
-.notifications__button{
+.notifications__button {
     display: flex;
     font-size: 24px;
     justify-content: center;
@@ -38,17 +38,10 @@
     height: fit-content;
 }
 
-.notifications__button:active{
-    display: flex;
-    font-size: 24px;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-    border-bottom: 4px solid var(--twitter-color);
+.notifications__button:hover {
+    background-color: var(--twitter-background);
 }
 
-.all__body{
+.all__body {
     width: 100vh;
 }

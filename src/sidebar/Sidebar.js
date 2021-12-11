@@ -19,11 +19,11 @@ function Sidebar() {
     return(
         <div className="sidebar">
             <a href="/home" className="sidebar__twitterIcon">
-                <PetsIconClick active Icon={PetsIcon} className="sidebar__twitterIcon"/>
+                <PetsIconClick Icon={PetsIcon} className="sidebar__twitterIcon"/>
             </a>
             <div className="buttonList">
                 <NavLink to="/home" className="buttonClass">
-                    <SidebarOption active Icon={HomeOutlinedIcon} text="Home" />
+                    <SidebarOption Icon={HomeOutlinedIcon} text="Home" />
                 </NavLink>
                 <NavLink to="/explore" className="buttonClass">
                     <SidebarOption Icon={SearchIcon} text="Explore" />

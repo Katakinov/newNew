@@ -24,16 +24,16 @@ class Home extends Component{
                     return(
                         <Post
                             userName={item.userName}
-                            tagName={item.tagName}
+                            avatar={item.avatar}
                             verified={item.verified && true}
+                            tagName={item.tagName}
                             postTime={item.postTime}
                             postText={item.postText}
                             postImage={item.postImage}
-                            avatar={item.avatar}
-                            commentNumber={item.commentNumber}
-                            retweetNumber={item.retweetNumber}
                             likeNumber={item.likeNumber}
+                            commentNumber={item.commentNumber}
                             shareNumber={item.shareNumber}
+                            retweetNumber={item.retweetNumber}
                             key={index}
                         />
                     )

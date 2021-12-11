@@ -61,6 +61,7 @@
 .downSide{
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .avatarAndEdit{
@@ -78,7 +79,7 @@
     border: 1px solid var(--twitter-background);
     border-width: 3px;
     position: relative;
-    margin-top: -80px;
+    margin-top: -80px !important;
     margin-left: 10px;
     margin-bottom: 15px;
     background-color: var(--twitter-background);
@@ -125,18 +126,58 @@
     color: grey;
 }
 
-.profileStatus{
+.profileStatus {
     margin-left: 20px;
     font-size: 15px;
     font-weight: 450;
     margin-top: 15px;
 }
 
-.profileCountFollow{
+.profileCountFollow {
     margin-left: 20px;
     font-size: 15px;
 }
 
-.following{
+.following {
     margin-right: 20px;
+}
+
+.profile__butBar {
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid var(--twitter-background);
+}
+
+.profile__Button {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    height: fit-content;
+    color: grey;
+    width: 100%;
+    background-color: white;
+    padding: 20px 0px 20px 0px;
+}
+
+.profile__Button:hover {
+    background-color: var(--twitter-background);
+    border-bottom: 4px solid var(--twitter-background);
+}
+
+.profile__ButtonActive {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    height: fit-content;
+    width: 100%;
+    background-color: white;
+    padding: 20px 0px 20px 0px;
+    border-bottom: 4px solid var(--twitter-color);
+    color: black;
 }
