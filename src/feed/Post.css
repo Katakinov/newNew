@@ -61,12 +61,18 @@
     padding: 15px;
 }
 
-.comment {
+.likeNoActive {
     display: flex;
     align-items: center;
 }
 
-.comment > h5 {
+.likeActive {
+    display: flex;
+    align-items: center;
+    color: red;
+}
+
+.noActive > h5 {
     margin-left: 5px;
 }
 

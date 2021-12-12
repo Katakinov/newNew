@@ -60,31 +60,29 @@ class Profile extends Component{
                     </div>
                 </div>
                 <div className="profile__butBar">
-                    <NavLink active className="profile__ButtonActive" to="/profile">Tweets</NavLink>
-                    <NavLink className="profile__Button" to="/profile/tweets&replies">Tweet & replies</NavLink>
+                    <NavLink active className="profile__Button" to="/profile">Tweets</NavLink>
+                    <NavLink className="profile__ButtonActive" to="/profile/tweets&replies">Tweet & replies</NavLink>
                     <NavLink className="profile__Button" to="/profile/media">Media</NavLink>
                     <NavLink className="profile__Button" to="/profile/likes">Likes</NavLink>
                 </div>
                 {profilePostItems.map((item, index) => {
-                    if (item.userName == "Katakinov"){
-                        return(
-                            <Post
-                                userName={item.userName}
-                                avatar={item.avatar}
-                                verified={item.verified && true}
-                                tagName={item.tagName}
-                                postTime={item.postTime}
-                                postText={item.postText}
-                                postImage={item.postImage}
-                                likeNumber={item.likeNumber}
-                                commentNumber={item.commentNumber}
-                                shareNumber={item.shareNumber}
-                                retweetNumber={item.retweetNumber}
-                                likedCl={item.likedCl}
-                                key={index}
-                            />
-                        )
-                    }
+                    return(
+                        <Post
+                            userName={item.userName}
+                            avatar={item.avatar}
+                            verified={item.verified && true}
+                            tagName={item.tagName}
+                            postTime={item.postTime}
+                            postText={item.postText}
+                            postImage={item.postImage}
+                            likeNumber={item.likeNumber}
+                            commentNumber={item.commentNumber}
+                            shareNumber={item.shareNumber}
+                            retweetNumber={item.retweetNumber}
+                            likedCl={item.likedCl}
+                            key={index}
+                        />
+                    )
                 })}
                 <div className="exploreWid">
                     <h2>Who to follow</h2>

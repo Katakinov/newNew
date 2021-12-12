@@ -1,8 +1,6 @@
 import React from "react";
-import TweetBox from "../feed/TweetBox";
-import homePostItems from "../array/HomePostItems";
-import Post from "../feed/Post";
 import "./Notifications.css"
+import {NavLink} from "react-router-dom";
 
 function Notifications() {
     return(
@@ -10,7 +8,14 @@ function Notifications() {
             <div className="notifications__header">
                 <div>Notifications</div>
             </div>
-            <Post/>
+            <div className="notifications__body">
+                <NavLink className="notifications__button" to="/notifications/all">
+                    All
+                </NavLink>
+                <NavLink className="notifications__button" to="/notifications/mentions">
+                    Mentions
+                </NavLink>
+            </div>
         </div>
     )
 };
