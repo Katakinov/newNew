@@ -3,8 +3,6 @@ import "./Profile.css"
 import Post from "./Post"
 import VerifiedUserIcon from "@material-ui/icons/VerifiedUser";
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
-import profileItems from "../array/ProfileItems"
-import profilePostItems from "../array/ProfilePostItems"
 import {useParams} from "react-router-dom";
 
 const User = () => {

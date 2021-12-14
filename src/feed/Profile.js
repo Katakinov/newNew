@@ -5,13 +5,12 @@ import VerifiedUserIcon from "@material-ui/icons/VerifiedUser";
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import profileItems from "../array/ProfileItems"
 import profilePostItems from "../array/ProfilePostItems"
-import {NavLink} from "react-router-dom";
 import ItemsWid from "../array/WidjetsItems";
 import WidgetsActual from "../widgets/WidgetsActual";
 
 class Profile extends Component{
     constructor(props) {
-        super();
+        super(props);
         this.state = {
             profileAvatar: profileItems.profileAvatar || "https://img.favpng.com/16/2/3/koala-bear-clip-art-png-favpng-e9SK7y5GVZm012JrLSbkRVZ71.jpg",
             profileUserName: profileItems.profileUserName || "defaultUserName",
@@ -22,9 +21,133 @@ class Profile extends Component{
             status: profileItems.status || "defaultStatus",
             following: profileItems.following || 0,
             followers: profileItems.followers || 0,
-        };
+            tapBarStatus1: "Profile",
+        }
+        this.tweetsRepliesTapBarClick =this.tweetsRepliesTapBarClick.bind(this)
+        this.tweetsTapBarClick =this.tweetsTapBarClick.bind(this)
+        this.mediaTapBarClick =this.mediaTapBarClick.bind(this)
+        this.likesTapBarClick =this.likesTapBarClick.bind(this)
     }
+
+    tweetsTapBarClick() {
+        this.setState({tapBarStatus1: "Profile"});
+        console.log(this.state.tapBarStatus1 + "clicked")
+    }
+    tweetsRepliesTapBarClick() {
+        this.setState({tapBarStatus1: "Tweets&Replies"});
+        console.log(this.state.tapBarStatus1 + "clicked")
+    }
+    mediaTapBarClick() {
+        this.setState({tapBarStatus1: "Media"});
+        console.log(this.state.tapBarStatus1 + "clicked")
+    }
+    likesTapBarClick() {
+        this.setState({tapBarStatus1: "Likes"});
+        console.log(this.state.tapBarStatus1 + "clicked")
+    }
+
     render() {
+        let post;
+        if (this.state.tapBarStatus1 == "Profile")
+                {
+                    post = profilePostItems.map((item, index) => {
+                        if (item.userName == "Katakinov"){
+                            return(
+                                <Post
+                                    userName={item.userName}
+                                    avatar={item.avatar}
+                                    verified={item.verified && true}
+                                    tagName={item.tagName}
+                                    postTime={item.postTime}
+                                    postText={item.postText}
+                                    postImage={item.postImage}
+                                    likeNumber={item.likeNumber}
+                                    commentNumber={item.commentNumber}
+                                    shareNumber={item.shareNumber}
+                                    retweetNumber={item.retweetNumber}
+                                    likedCl={item.likedCl}
+                                    key={index}
+                                />
+                                )
+                            }
+                        }
+                    )
+                }
+                else if (this.state.tapBarStatus1 == "Tweets&Replies")
+                {
+                    post = profilePostItems.map((item, index) => {
+                        return(
+                            <Post
+                                userName={item.userName}
+                                avatar={item.avatar}
+                                verified={item.verified && true}
+                                tagName={item.tagName}
+                                postTime={item.postTime}
+                                postText={item.postText}
+                                postImage={item.postImage}
+                                likeNumber={item.likeNumber}
+                                commentNumber={item.commentNumber}
+                                shareNumber={item.shareNumber}
+                                retweetNumber={item.retweetNumber}
+                                likedCl={item.likedCl}
+                                key={index}
+                            />
+                            )
+                        }
+                    )
+                }
+                else if (this.state.tapBarStatus1 == "Likes")
+                {
+                    post = profilePostItems.map((item, index) => {
+                        if (item.liked){
+                            return(
+                                <Post
+                                    userName={item.userName}
+                                    avatar={item.avatar}
+                                    verified={item.verified && true}
+                                    tagName={item.tagName}
+                                    postTime={item.postTime}
+                                    postText={item.postText}
+                                    postImage={item.postImage}
+                                    likeNumber={item.likeNumber}
+                                    commentNumber={item.commentNumber}
+                                    shareNumber={item.shareNumber}
+                                    retweetNumber={item.retweetNumber}
+                                    likedCl={item.likedCl}
+                                    key={index}
+                                />
+                                )
+                            }
+                        }
+                    )
+                }
+                else if (this.state.tapBarStatus1 == "Media")
+                {
+                    post = profilePostItems.map((item, index) => {
+                        if (item.postImage){
+                            return(
+                                <Post
+                                    userName={item.userName}
+                                    avatar={item.avatar}
+                                    verified={item.verified && true}
+                                    tagName={item.tagName}
+                                    postTime={item.postTime}
+                                    postText={item.postText}
+                                    postImage={item.postImage}
+                                    likeNumber={item.likeNumber}
+                                    commentNumber={item.commentNumber}
+                                    shareNumber={item.shareNumber}
+                                    retweetNumber={item.retweetNumber}
+                                    likedCl={item.likedCl}
+                                    key={index}
+                                />
+                                )
+                            }
+                        }
+                    )
+                }
+                console.log(this.state.tapBarStatus1 + " no click")
+                console.log("hello world!")
         return (
             <div className="profile">
                 <div className="profile__header">
@@ -60,32 +183,18 @@ class Profile extends Component{
                     </div>
                 </div>
                 <div className="profile__butBar">
-                    <NavLink active className="profile__ButtonActive" to="/profile">Tweets</NavLink>
-                    <NavLink className="profile__Button" to="/profile/tweets&replies">Tweet & replies</NavLink>
-                    <NavLink className="profile__Button" to="/profile/media">Media</NavLink>
-                    <NavLink className="profile__Button" to="/profile/likes">Likes</NavLink>
+                    {/*<NavLink active className="profile__ButtonActive">Tweets</NavLink>
+                    <NavLink className="profile__Button">Tweet & replies</NavLink>
+                    <NavLink className="profile__Button">Media</NavLink>
+        <NavLink className="profile__Button">Likes</NavLink>*/}
+                    <button onClick={this.tweetsTapBarClick} className="profile_Button">Tweets</button>
+                    <button onClick={this.tweetsRepliesTapBarClick} className="profile_Button">Tweets & Replies</button>
+                    <button onClick={this.mediaTapBarClick} className="profile_Button">Media</button>
+                    <button onClick={this.likesTapBarClick} className="profile_Button">Likes</button>
                 </div>
-                {profilePostItems.map((item, index) => {
-                    if (item.userName == "Katakinov"){
-                        return(
-                            <Post
-                                userName={item.userName}
-                                avatar={item.avatar}
-                                verified={item.verified && true}
-                                tagName={item.tagName}
-                                postTime={item.postTime}
-                                postText={item.postText}
-                                postImage={item.postImage}
-                                likeNumber={item.likeNumber}
-                                commentNumber={item.commentNumber}
-                                shareNumber={item.shareNumber}
-                                retweetNumber={item.retweetNumber}
-                                likedCl={item.likedCl}
-                                key={index}
-                            />
-                        )
-                    }
-                })}
+                
+                {post}
+        
                 <div className="exploreWid">
                     <h2>Who to follow</h2>
                     {ItemsWid.map((item, index) => {
