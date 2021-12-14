@@ -27,23 +27,20 @@ class Profile extends Component{
         this.tweetsTapBarClick =this.tweetsTapBarClick.bind(this)
         this.mediaTapBarClick =this.mediaTapBarClick.bind(this)
         this.likesTapBarClick =this.likesTapBarClick.bind(this)
+
     }
 
     tweetsTapBarClick() {
         this.setState({tapBarStatus1: "Profile"});
-        console.log(this.state.tapBarStatus1 + "clicked")
     }
     tweetsRepliesTapBarClick() {
         this.setState({tapBarStatus1: "Tweets&Replies"});
-        console.log(this.state.tapBarStatus1 + "clicked")
     }
     mediaTapBarClick() {
         this.setState({tapBarStatus1: "Media"});
-        console.log(this.state.tapBarStatus1 + "clicked")
     }
     likesTapBarClick() {
         this.setState({tapBarStatus1: "Likes"});
-        console.log(this.state.tapBarStatus1 + "clicked")
     }
 
     render() {
@@ -146,8 +143,6 @@ class Profile extends Component{
                         }
                     )
                 }
-                console.log(this.state.tapBarStatus1 + " no click")
-                console.log("hello world!")
         return (
             <div className="profile">
                 <div className="profile__header">
@@ -183,14 +178,10 @@ class Profile extends Component{
                     </div>
                 </div>
                 <div className="profile__butBar">
-                    {/*<NavLink active className="profile__ButtonActive">Tweets</NavLink>
-                    <NavLink className="profile__Button">Tweet & replies</NavLink>
-                    <NavLink className="profile__Button">Media</NavLink>
-        <NavLink className="profile__Button">Likes</NavLink>*/}
-                    <button onClick={this.tweetsTapBarClick} className="profile_Button">Tweets</button>
-                    <button onClick={this.tweetsRepliesTapBarClick} className="profile_Button">Tweets & Replies</button>
-                    <button onClick={this.mediaTapBarClick} className="profile_Button">Media</button>
-                    <button onClick={this.likesTapBarClick} className="profile_Button">Likes</button>
+                    <button onClick={this.tweetsTapBarClick} className="profile_tapBarButton">Tweets</button>
+                    <button onClick={this.tweetsRepliesTapBarClick} className="profile_tapBarButton">Tweets & Replies</button>
+                    <button onClick={this.mediaTapBarClick} className="profile_tapBarButton">Media</button>
+                    <button onClick={this.likesTapBarClick} className="profile_tapBarButton">Likes</button>
                 </div>
                 
                 {post}

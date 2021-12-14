@@ -142,29 +142,62 @@
     margin-right: 20px;
 }
 
-.profile__butBar {
-    display: flex;
-    width: 100%;
-    border-bottom: 2px solid var(--twitter-background);
-}
-
-.profile__Button {
-    display: flex;
-    font-size: 20px;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    height: fit-content;
-    color: grey;
-    width: 100%;
+/*.profile__butBar>button{
+    color: lightgray;
     background-color: white;
-    padding: 20px 0px 20px 0px;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
 }
 
-.profile__Button:hover {
+.profile__butBar>button:hover {
     background-color: var(--twitter-background);
-    border-bottom: 4px solid var(--twitter-background);
+}*/
+
+.profile__butBar{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid var(--twitter-background);
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.profile_tapBarButton{
+    color: grey;
+    display: flex;
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.activeTabBarButtonClass{
+    color: black;
+    border: none;
+    border-bottom: 2px solid var(--twitter-color);
+    display: flex;
+    background-color: white;
+    font-size: 20px;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.profile_tapBarButton:focus{
+    border-bottom: 4px solid var(--twitter-color);
+    color: black;
+}
+
+.profile_tapBarButton:hover{
+    background-color: var(--twitter-background);
 }
 
 .profile__ButtonActive {
